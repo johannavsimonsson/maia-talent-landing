@@ -45,6 +45,7 @@
         </div>
       </div>
       <div style="background:#FFFFFF;border-radius:18px;box-shadow:0 40px 90px rgba(0,0,0,0.35);overflow:hidden;">
+<div style="background:#FFFFFF;border-radius:18px;box-shadow:0 40px 90px rgba(0,0,0,0.35);overflow:hidden;">
   <!-- Fönsterhuvud (Browser Bar) -->
   <div style="height:44px;background:#EDF2FA;display:flex;align-items:center;gap:9px;padding:0 18px;border-bottom:1px solid rgba(13,29,62,0.12);">
     <div style="width:11px;height:11px;border-radius:999px;background:#C9D4E6;"></div>
@@ -53,13 +54,15 @@
     <div style="margin-left:14px;font:500 15px 'Manrope',sans-serif;color:#5A6A85;">portal.dittforetag.se</div>
   </div>
 
-  <!-- Videospelare -->
+  <!-- Automatisk videospelare -->
   <div style="position:relative;width:100%;background:#0D1D3E;display:flex;align-items:center;justify-content:center;">
     <video 
       src="./MAIAinfo.mp4" 
-      controls 
+      autoplay 
+      loop 
+      muted 
       playsinline
-      preload="metadata"
+      preload="auto"
       style="width:100%;height:auto;display:block;aspect-ratio:16/9;object-fit:cover;"
     >
       Din webbläsare stödjer inte videotaggen.
