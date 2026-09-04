@@ -1,0 +1,13 @@
+{
+  "name": "maia-talent-landing",
+  "version": "1.0.0",
+  "description": "MAIA Talent landing page - Static HTML site for Vercel deployment",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx http-server -p 3000 -o",
+    "build": "echo 'No build needed for static HTML'"
+  },
+  "keywords": ["maia", "talent", "landing-page"],
+  "author": "",
+  "license": "MIT"
+}
