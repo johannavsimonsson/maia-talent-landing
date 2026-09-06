@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Sora:wght@700&display=swap" rel="stylesheet">
   
-  <style>
+<style>
     html, body { 
       margin: 0; 
       background: #F4F7FC; 
@@ -31,36 +31,65 @@
 
     /* Mobilanpassningar (Responsivitet) */
     @media (max-width: 900px) {
-      /* Håll hela headern på en vågrät rad istället för vertikal stapling */
-      header div {
+      /* 1. Huvudcontainern i headern läggs i rad */
+      header > div {
         flex-direction: row !important;
-        align-items: center !important;
+        align-items: flex-start !important;
         justify-content: flex-start !important;
         gap: 12px !important;
+        padding: 14px 16px !important;
       }
 
-      /* Gör själva loggans bild mindre */
+      /* 2. LOGOTYP-BLOCK: Bryt upp blocket så bild och text tillåts ligga sida vid sida/falla ut */
+      header > div > div:first-child {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        gap: 10px !important;
+        flex-shrink: 0 !important;
+      }
+
+      /* Krymp bildbehållaren och själva bilden */
+      header > div > div:first-child > div:first-child {
+        width: 32px !important;
+        height: 25px !important;
+      }
       header img {
-        max-height: 32px !important; /* Justera storleken efter behov */
+        height: 25px !important;
         width: auto !important;
-        flex-shrink: 0 !important; /* Förhindrar att loggan kläms ihop */
       }
 
-      /* Nav-menyn till höger tillåts bryta rader */
+      /* Texten bredvid bilden (MAIA / TALENT) */
+      header > div > div:first-child div[style*="font:700"] {
+        font-size: 15px !important;
+      }
+      header > div > div:first-child div[style*="font:400"] {
+        font-size: 8px !important;
+        letter-spacing: 2px !important;
+        margin-top: 1px !important;
+      }
+
+      /* 3. NAVIGERINGEN: Hamnar till höger om loggan och bryter fritt på 2-3 rader */
       nav {
         display: flex !important;
         flex-direction: row !important;
-        flex-wrap: wrap !important; /* Tillåter radbrytning på 2-3 rader */
+        flex-wrap: wrap !important;
         justify-content: flex-start !important;
-        gap: 4px 10px !important; /* Första värdet = radavstånd, andra = kolumnavstånd */
+        gap: 6px 10px !important;
       }
 
-      /* Gör texten något mindre så att den bryter snyggt */
+      /* Mindre länkar så allt får plats snyggt */
       nav a {
         font-size: 13px !important;
+        padding: 2px 4px !important;
       }
-      
-      /* Minska padding i alla sektioner så innehållet får plats */
+
+      /* Övriga mobilregler */
+      div[style*="grid-template-columns"] {
+        grid-template-columns: 1fr !important;
+        gap: 24px !important;
+      }
+
       section {
         padding-left: 20px !important;
         padding-right: 20px !important;
@@ -68,39 +97,10 @@
         padding-bottom: 50px !important;
       }
 
-      /* Anpassa rubrikstorlekar */
       h1 { font-size: 28px !important; }
       h2 { font-size: 30px !important; }
       h3 { font-size: 20px !important; }
 
-      /* Mobilanpassningar (Responsivitet) */
-    @media (max-width: 900px) {
-      /* Behåll header på en rad och sprid ut innehållet */
-      header div {
-        flex-direction: row !important;
-        justify-content: space-between !important;
-        align-items: center !important;
-        gap: 12px !important;
-      }
-
-      /* Gör loggan/bilden i headern mindre */
-      header img,
-      header a:first-child {
-        max-height: 28px !important; /* Justera höjden efter behov */
-        width: auto !important;
-      }
-
-      /* Justera nav-länkarna så de får plats på raden */
-      nav {
-        flex-wrap: nowrap !important;
-        justify-content: flex-end !important;
-        gap: 8px !important;
-        font-size: 13px !important; /* Gör texten något mindre vid behov */
-      }
-      
-      /* ... resterna av dina mobilregler ... */
-
-      /* Krymp stora kort */
       div[style*="padding:64px"],
       div[style*="padding:44px 46px"] {
         padding: 24px 18px !important;
