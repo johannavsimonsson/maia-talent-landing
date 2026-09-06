@@ -431,7 +431,21 @@
       <h2 style="font:700 50px 'Sora',sans-serif;line-height:1.15;color:#FFFFFF;margin:0;text-wrap:balance;">See the portal in your brand</h2>
       <p style="font:400 22px 'Manrope',sans-serif;line-height:1.55;color:#B7CAF0;margin:22px auto 0;max-width:620px;text-wrap:pretty;">Book a 30-minute demo. We will show you the portal, the underlying data, and what it looks like with your logo on it.</p>
       <div style="display:flex;align-items:center;justify-content:center;gap:18px;margin-top:40px;flex-wrap:wrap;">
-        <a href="https://cal.com/johanna-tornstrom-u3xw8l/30min" style="font:700 19px 'Manrope',sans-serif;color:#03302A;background:#09C2A3;padding:20px 40px;border-radius:999px;white-space:nowrap;text-decoration:none;" onmouseover="this.style.background='#4FF7DB'" onmouseout="this.style.background='#09C2A3'">Book a demo</a>
+        <!-- Cal inline embed code begins -->
+<div style="width:100%;height:100%;overflow:scroll" id="my-cal-inline"></div>
+<script type="text/javascript">
+  (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let c = C.Cal = C.Cal || function () { let cal = c; let arg = arguments; if (!cal.q) { cal.q = []; } if (typeof arg[0] === 'string') { if (arg[0] === 'init') { let api = function () { p(api, arguments); }; let namespace = arg[1]; if (namespace) { cal.ns = cal.ns || {}; cal.ns[namespace] = api; p(api, arg); } else { p(cal, arguments); } return; } else { p(cal, arguments); } } else { p(cal, arguments); } }; })(window, "https://app.cal.com/embed/embed.js", "init");
+  
+  Cal("init", {origin:"https://cal.com"});
+
+  Cal("inline", {
+    elementOrSelector:"#my-cal-inline",
+    calLink: ""https://cal.com/johanna-tornstrom-u3xw8l/30min"",
+    config: {"layout":"month_view"}
+  });
+
+  Cal("ui", {"styles":{"branding":{"brandColor":"#000000"}},"hideEventTypeDetails":false,"layout":"month_view"});
+</script>
         <a href="mailto:info@maiatalent.se" style="font:700 19px 'Manrope',sans-serif;color:#FFFFFF;border:1.5px solid rgba(183,202,240,0.45);padding:18px 38px;border-radius:999px;white-space:nowrap;text-decoration:none;" onmouseover="this.style.borderColor='#FFFFFF'" onmouseout="this.style.borderColor='rgba(183,202,240,0.45)'">info@maiatalent.se</a>
       </div>
     </div>
