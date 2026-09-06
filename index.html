@@ -50,16 +50,32 @@
       h2 { font-size: 30px !important; }
       h3 { font-size: 20px !important; }
 
-      /* Centrera header & navigation */
+     /* Mobilanpassningar (Responsivitet) */
+    @media (max-width: 900px) {
+      /* Behåll header på en rad och sprid ut innehållet */
       header div {
-        flex-direction: column !important;
-        gap: 16px !important;
-      }
-      nav {
-        flex-wrap: wrap !important;
-        justify-content: center !important;
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        align-items: center !important;
         gap: 12px !important;
       }
+
+      /* Gör loggan/bilden i headern mindre */
+      header img,
+      header a:first-child {
+        max-height: 28px !important; /* Justera höjden efter behov */
+        width: auto !important;
+      }
+
+      /* Justera nav-länkarna så de får plats på raden */
+      nav {
+        flex-wrap: nowrap !important;
+        justify-content: flex-end !important;
+        gap: 8px !important;
+        font-size: 13px !important; /* Gör texten något mindre vid behov */
+      }
+      
+      /* ... resterna av dina mobilregler ... */
 
       /* Krymp stora kort */
       div[style*="padding:64px"],
