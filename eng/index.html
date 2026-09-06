@@ -31,12 +31,35 @@
 
     /* Mobilanpassningar (Responsivitet) */
     @media (max-width: 900px) {
-      /* Gör alla 2- och 4-kolumnsytor till 1 kolumn */
-      div[style*="grid-template-columns"] {
-        grid-template-columns: 1fr !important;
-        gap: 24px !important;
+      /* Håll hela headern på en vågrät rad istället för vertikal stapling */
+      header div {
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        gap: 12px !important;
       }
 
+      /* Gör själva loggans bild mindre */
+      header img {
+        max-height: 32px !important; /* Justera storleken efter behov */
+        width: auto !important;
+        flex-shrink: 0 !important; /* Förhindrar att loggan kläms ihop */
+      }
+
+      /* Nav-menyn till höger tillåts bryta rader */
+      nav {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: wrap !important; /* Tillåter radbrytning på 2-3 rader */
+        justify-content: flex-start !important;
+        gap: 4px 10px !important; /* Första värdet = radavstånd, andra = kolumnavstånd */
+      }
+
+      /* Gör texten något mindre så att den bryter snyggt */
+      nav a {
+        font-size: 13px !important;
+      }
+      
       /* Minska padding i alla sektioner så innehållet får plats */
       section {
         padding-left: 20px !important;
