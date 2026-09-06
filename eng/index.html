@@ -7,11 +7,69 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Sora:wght@700&display=swap" rel="stylesheet">
+  
+  <style>
+    html, body { 
+      margin: 0; 
+      background: #F4F7FC; 
+      -webkit-font-smoothing: antialiased; 
+    }
+    a { 
+      color: #2B60CE; 
+      text-decoration: none; 
+    }
+    a:hover { 
+      color: #0D1D3E; 
+    }
+    summary { 
+      list-style: none; 
+      cursor: pointer; 
+    }
+    summary::-webkit-details-marker { 
+      display: none; 
+    }
+
+    /* Mobilanpassningar (Responsivitet) */
+    @media (max-width: 900px) {
+      /* Gör alla 2- och 4-kolumnsytor till 1 kolumn */
+      div[style*="grid-template-columns"] {
+        grid-template-columns: 1fr !important;
+        gap: 24px !important;
+      }
+
+      /* Minska padding i alla sektioner så innehållet får plats */
+      section {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+        padding-top: 50px !important;
+        padding-bottom: 50px !important;
+      }
+
+      /* Anpassa rubrikstorlekar */
+      h1 { font-size: 28px !important; }
+      h2 { font-size: 30px !important; }
+      h3 { font-size: 20px !important; }
+
+      /* Centrera header & navigation */
+      header div {
+        flex-direction: column !important;
+        gap: 16px !important;
+      }
+      nav {
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 12px !important;
+      }
+
+      /* Krymp stora kort */
+      div[style*="padding:64px"],
+      div[style*="padding:44px 46px"] {
+        padding: 24px 18px !important;
+      }
+    }
+  </style>
 </head>
-<body style="margin:0;padding:0;background:#F4F7FC;">
-
-<div style="font-family:'Manrope',system-ui,sans-serif;color:#0D1D3E;background:#F4F7FC;">
-
+<body>
 <!-- HEADER MED SPRÅKVÄLJARE -->
 <header style="position:sticky;top:0;z-index:20;background:#0D1D3E;border-bottom:1px solid rgba(183,202,240,0.18);">
   <div style="max-width:1200px;margin:0 auto;padding:18px 32px;display:flex;align-items:center;justify-content:space-between;gap:32px;">
